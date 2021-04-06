@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+.wrap{
+width:100%;
+}
+
+.header{
+width:240px;
+height:50px;
+margin: auto;
+margin-top:20px;
+margin-bottom:30px;
+}
+
+.footer{
+width:300px;
+
+margin:0 0 0 18px;
+}
+
+body{
+width:100%;
+background-color:#f5f6f7;
+font-size:12px;
+font-family:"돋움";
+}
+
+label{	
+font-size:12px;
+font-family:"돋움";
+}
+
+
+
+
+.main{
+width:350px;
+margin:auto;
+padding:8px;
+
+}
+
+
+button{
+   color: #fff;
+    border: solid 1px;
+    background-color: #03c75a;
+    height:42px;
+}
+
+
+input{
+margin:1px 0px 15px 0px;
+width:350px;
+font-size:12px;
+font-family:"돋움";
+height:29px;
+
+}
+select{
+width:360px;
+height:35px;
+font-size:12px;
+font-family:"돋움";
+margin:1px 0px 15px 0px
+
+}
+
+
+.birthday{
+width:109.249px;
+margin:1px 0px 15px 0px
+}
+
+
+.phone{
+width:251.9px;
+height:35px;
+
+}
+
+
+
+.btn{
+	width:350px;
+	height:36px;
+	margin-top:20px;
+   color: #fff;
+    border: solid 1px rgba(0,0,0,.08);
+    background-color: #03c75a;
+	
+	display: block;
+    padding: 15px 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+#email_1{
+width:350px;
+height:35px;
+border: gray;
+}
+</style>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+		<img src="images/naverlogo.png" alt="이미지"></div>
+		<div class="main">
+			<div>
+				<label for="id2">아이디</label><br>
+				<div><input type="text" name="id2" value="@이아란 바보"  style="text-align: right; color:gray; maxlength="20"><br>
+				<label for="password">비밀번호</label><br> 
+				<input type="password" name="password" maxlength="20"><br>
+				<label for="pwd2">비밀번호재확인</label><br> 
+				<input type="text" name="pwd2" maxlength="20"><br>
+				<label for="name">이름</label><br>
+				<input type="text" name="name" maxlength="20">
+				<!-- 아이디/비밀번호/비밀번호 재입력/이름 -->
+			</div>
+			<div>
+			<label for="birthday">생년월일</label> <br>
+				<input type="text" class="birthday" name="birthday" maxlength="4" value="년(4자)">
+				<select class="birthday" name="birthday">
+								<option>1월</option>
+								<option>2월</option>
+								<option>3월</option>
+								<option>4월</option>
+								<option>5월</option>
+								<option>6월</option>
+								<option>7월</option>
+								<option>8월</option>
+								<option>9월</option>
+								<option>10월</option>
+								<option>11월</option>
+								<option>12월</option>
+					</select>
+				<input type="text" class="birthday" name="birthday_1" maxlength="2" value="일">
+			</div>
+			<div>
+						<label class="gender" for="gender">성별</label> <br>
+				<select name="gender">
+				<option>성별</option>
+				<option>남</option>
+				<option>여</option>
+				<option>선택안함</option>
+				
+				</select>
+				
+				<!-- 성별 입력 -->
+			</div>
+			<div>
+			<label for="email">본인 확인 메일</label> <br>
+				<input type="text" style="color: gray" name="email" value="선택입력"><br>
+					<label for="phone">휴대전화</label> <br>
+					<select name="nation">
+								<option>(대한민국)+82</option>
+								<option>(중국)+86</option>
+								<option>(네팔)+977</option>
+								<option>(덴마크)+45</option>
+								<option>(가나)+224</option>
+								<option>(레바논)+961</option>
+
+				</select><br>
+				<input type="text" class="phone" name="phone" value="전화번호입력" style="color:gray">
+				<button>인증번호 받기</button><br>
+				<input type="text" id="email_1" class="phone2" name="phone" value="인증번호를 입력하세요" style="color:gray; background-color:lightgray"><br>
+				<button class="btn">가입하기</button><br>
+							</div>
+							</div>
+			
+		<div class="footer">
+			
+			<em><a href="https://www.navercorp.com/" target="_blank" class="logo"><span class="blind">naver</span></a></em><em class="copy">Copyright</em>
+			<em class="u_cri">©</em>
+			<a href="https://www.navercorp.com/" target="_blank" class="u_cra">NAVER Corp.</a>
+			<span class="all_r">All Rights Reserved.</span>
+		</address>
+	</div>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

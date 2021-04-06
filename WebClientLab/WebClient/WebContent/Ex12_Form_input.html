@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 안에 input 태그</title>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>Text:Password</legend>
+			Text: <input type="text" name="userid" id="userid"><br>
+			Password: <input type="password" name="pwd" maxlength="5"><br>
+			<hr>
+			Text: <input type="text" name="userid" id="userid" maxlength="10"
+				size="100px" value="기본값"><br>
+			<hr>
+			readonly(읽기전용 : 서버로 데이터 전송 가능) <input type="text" name="userid"
+				value="hong" readonly="readonly"><br> <br>
+			disabled(비활성화 : 서버로 데이터 전송 불가능) <input type="text" name="userid"
+				value="kim" disabled="disabled"><br>
+		</fieldset>
+		<fieldset>
+			<legend>체크박스(다중선택)</legend>
+			농구:<input type="checkbox" name="sports_1" value="A" checked="checked">
+			야구:<input type="checkbox" name="sports_2" value="B"> 축구:<input
+				type="checkbox" name="sports_3" value="C">
+		</fieldset>
+		<!-- 
+			    get 서버 전송
+				register.jsp?sports_1=A&sports_2=B&sports_3=C (목적지 출발)
+				
+				register.jsp
+				String s = request.getParameter("sports_1");
+				String s1 = request.getParameter("sports_2");
+				String s2 = request.getParameter("sports_3");
+				s변수에는 >> A  >> 로직에 따라서 
+				
+				
+			농구:<input type="checkbox" name="sports" value="A" checked="checked">
+			야구:<input type="checkbox" name="sports" value="B">
+			축구:<input type="checkbox" name="sports" value="C">
+				
+				get 서버 전송
+				register.jsp?sports=A&sports=B&sports=C (목적지 출발)
+				
+				register.jsp
+				String[] strarr =  request.getParameterValues(sports)
+				
+				getParameterValues 내부에 >> String[] s = {"A","B","C"}
+				
+				strarr[0] >> A
+				strarr[1] >> B
+				strarr[2] >> C
+				
+			 -->
+		<fieldset>
+			<legend>Select 태그(단일선택 년, 월, 일)</legend>
+		</fieldset>
+		<select name="year">
+			<option value="2021">2021년</option>
+			<option value="2020" selected>2020년</option>
+			<option value="2019">2019년</option>
+		</select>
+		<!-- 
+	register.jsp?year=2020  //웹통해서 서버로 가는 데이터 문자열
+	register.jsp
+	String year= Integer.parseInt(request.getParameter("year"));
+	
+	 -->
+
+
+		<fieldset>
+			<legend>Select 태그(다중선택)^^</legend>
+		</fieldset>
+		<select name="year" multiple>
+			<option value="2021">2021년</option>
+			<option value="2020" selected>2020년</option>
+			<option value="2019">2019년</option>
+		</select>
+		<!-- 
+			register.jsp?year=2019&year=2020&year=2021
+			checkbox 다중선택 원리와 동일(배열)
+			
+		 -->
+		<!-- 
+	register.jsp?year=2020  //웹통해서 서버로 가는 데이터 문자열
+	register.jsp
+	String year= Integer.parseInt(request.getParameter("year"));
+		
+	 -->
+		<fieldset>
+			<legend>라디오 버튼(단일 선택: 남,여 선택):name 같으면 하나의 그룹 </legend>
+			여<input type="radio" name="gender" value="1" checked><br>
+			남<input type="radio" name="gender" value="2"><br>
+			<hr>
+			대<input type="radio" name="product" value="1" checked><br>
+			중<input type="radio" name="product" value="1"><br>
+			소<input type="radio" name="product" value="1"><br>
+		
+		</fieldset>
+		<fieldset>
+		<legend>기타 등등</legend>
+		1. 화면에 출력이 안돼요(소스는 있어요)
+		<input type="hidden" value="1000" name="data">
+		<hr>
+		2.파일 업로드(클라이언트 파일 선택 가능)
+		<input type="file" name="imgipload">
+		<hr>
+		3.게시판 글쓰기(여러줄): 초기 화면의 크기(rows,cols 몇줄에 몇칸)
+		<textarea rows="" cols""></textarea>
+		<hr>
+		4.각종 버튼들
+		<input type="button" value="나 눌러봐" onclick="alert('쉬는 시간')">
+		<br>
+		<!-- 
+			type="image" 내부적으로 submit
+			type="submit"
+			type="reset"
+			
+		 -->
+		</fieldset>
+		
+		
+		
+	</form>
+</body>
+</html>

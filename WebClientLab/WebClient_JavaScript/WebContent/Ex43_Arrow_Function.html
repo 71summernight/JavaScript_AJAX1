@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+</body>
+	<script type="text/javascript">
+		//일반함수
+		//function foo(){}
+		
+		//익명함수
+		let foo = function(){
+			console.log("foo");
+		}
+		foo();
+		
+		//ES6 (함수의 줄임 표현)
+		//매개변수가 없는 경우(parameter)
+		let bar = () => console.log("bar");
+		bar();
+		
+		//매개변수 1개
+		//let foo2 = function(x){ return x}
+		let foo2 = x => x;
+		
+		let hello;
+		//hello =(val) => "hello" + val;
+		hello = val => "hello" + val;
+		let v = hello("aaa");
+		console.log(v);
+		document.getElementById("demo").innerHTML = hello("방가방가");
+		
+		//매개변수가 2개이상인 경우
+		//let foo3 = (a,b) => {return a + b};
+		let foo3 = (a,b) => a + b;
+		let v2 = foo3(10,20);
+		let foo4 = (a,b) => {let c = 100; return a + b + c};
+		
+		//객체 반환시
+		let foo5 = () => ({a:1 , b:2 , c:3});
+		let v3 = foo5();
+		console.log(v3);
+		
+		//즉시 실행 함수 (암기)
+		//원칙 : 함수는 호출에 의해서
+		(
+		  function(){
+			 console.log("즉시 실행 함수");  
+		  }()		
+		);
+		
+		//화살표 표현식
+		(
+			()=>{console.log("즉시 실행 함수");  }		
+		)();
+		//Array 객체가 가지고 있는 다양한 함수...
+		
+		//암기....
+		//1.for(let i=0;i<10;i++){}
+		//2.for(let index in Array){Array[index]}
+		//{a:1,b:2,c:3}
+		//3.for(let key in Object){key.....}
+		//+ 추가적으로 
+		//Array.isArray();
+		//4.Array.forEach(function())
+		//Array.map()
+		
+		function myfunc(){
+			let fruits=["A","B","C","D"];
+			let x=document.getElementById("demo2");
+			x.innerHTML=Array.isArray(fruits);
+			
+		}
+		myfunc();
+		let txt="";
+		let numbers=[45,4,9,16,25];
+		//number.forEach(function(elt,i,array){
+			
+		//});
+		numbers.forEach(myFunc2);
+		function myFunc2(value,index,array){
+			txt="("+value+")"+"["+index+"]"+"[" + array + "]"; 
+			console.log(txt);
+		}
+		//let numbers=[45,4,9,16,25];
+		let numbermap=numbers.map(myFunc3); //새로운 배열....조작해서
+		console.log(numbermap);//new Array.....
+		
+		
+	function myFunc3(value,index,array){
+		return value*2;
+	}
+	///////////////////////////////////////////////////////////////
+	let evens=[2,4,6,8];
+	let odds=evens.map(val=>val+1);
+	console.log(odds);
+	//map을 쓰는 이유는 조작된 배열을 리턴받겠다.
+	
+	let nums=evens.map((value,index)=>value+index);
+	console.log(nums);
+	
+	let arr=[];
+	evens.forEach(value=>{
+	if(value%2===0){
+		arr.push(value);
+	}	
+	})
+	console.log(arr);
+	
+	
+	
+		
+	</script>
+</html>
+
+
+
+
+
+

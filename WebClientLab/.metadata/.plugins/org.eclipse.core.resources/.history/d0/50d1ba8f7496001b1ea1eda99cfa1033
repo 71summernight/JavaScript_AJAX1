@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*Jquery 제공하는 비동기함수(Ajax) 학습
+ *https://api.jquery.com/category/ajax/
+ *Jquery비동기 함수는 내부적으로:XmlHttpRequest 객체를 사용
+ 
+ Ajax 
+ Global Ajax Event Handlers(10%)
+ Helper Functions(10%)
+ Low-Level Interface: 30%(모든 옵션을 개발자 제어)>>$.ajax()
+ Shorthand Metghods:50%(기본 옵션을 가지고 있는 함수)>>load(),get()
+ 	
+ .load( url [, data ] [, complete ] )
+ url
+ Type:String 
+ A string containing the URL to which the request is sent.
+ 
+ data 
+ Type: PlainObject or String
+ A plain object or string that is sent to the server with the request.
+
+ conplete
+ Type: Function( String responseText, String textStatus, jqXHR jqXHR )
+ A callback function that is executed when the request completes.
+ */
+
+
+</script>
+</head>
+<body>
+<h3>동기처리</h3>
+<div>
+<form action="Ex01_Server_Date.jsp" method="get">
+<input type="text" name="msg" id="msg">
+<input type="submit" value="동기전송">
+
+</form>
+
+
+
+</div>
+</body>
+</html>

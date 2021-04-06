@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+
+
+</script>
+</head>
+<body>
+<input type="button" id="btn" value="회사소개">
+<div id="display" style="background-color: gray">DATA</div>
+
+</body>
+</html>

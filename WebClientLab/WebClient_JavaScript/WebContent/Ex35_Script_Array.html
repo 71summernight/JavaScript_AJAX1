@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//javascript 배열(Array) >>java(Colletion)
+
+	let array = [ '포도', '사과' ];
+	document.write(array.toString() + "<br>");
+	document.write(array + "-default toString()<br>");
+
+	for (let i = 0; i < array.length; i++) {
+		document.write(array[i] + "<br>");
+	}
+	for ( let index in array) {
+		document.write(array[index] + "<br>");
+	}
+	//동적
+	array[2] = "바나나"; //동적 데이터 추
+	document.write(array.toString() + "-" + array.length + "<br>");
+
+	//권장하지 않아요(가능은 해요)
+	array[10] = "애플망고";
+	document.write(array.toString() + "-" + array.length + "<br>");
+	document.write(array[9] + "_array[9]<br>"); //undefined
+
+	array[9] = "배";
+	document.write(array[9] + "_초기화: 타입설정: _array[9]<br>");
+
+	let array2 = [ "one", "two", "three" ];
+	document.write("array2: " + array2.length + "<br>");
+
+	array2.length = 2;//강제로
+	document.write(array2.toString() +"-" + array2.length + "<br>");
+
+	array2.length = 4;//강제
+	document.write(array2.toString() + "-" + array2.length + "<br>");
+
+	//권장방법
+	//Array>>stack>LIFO>>push(), pop()
+	array2.push("four");
+	document.write(array2.toString() + "-" + array2.length + "<br>");
+	document.write(array2.pop());
+	document.write(array2.pop());
+	document.write(array2.pop());
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

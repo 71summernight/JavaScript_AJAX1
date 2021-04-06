@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+window.onload=function(){
+	let btnodj=document.getElementById("btnGetData");
+		//이벤트 처리>>동적 처리
+		//<input type="button" onclick="">좋은 방법 아니다.
+		btngj.onclick =function(){
+			let txtmsg=document.getElementById("txtmesage");
+			let str="";
+			str+="ID : "+txtmsg.getAttribute("id");
+			str+="\n vlaue : "+ txtmsg.getAttribute("value");
+			str+="\n value : "+txtmsg.value;
+			str+="\n length:" +txtmsg.value.length;
+			
+			console.log(str);
+			
+			
+		}
+	document.getElementById("btnCreate").onclick=function(){
+		let txtname=document.createElement("input");
+		//<input>
+		txtname=setAttribute("type","text");
+		//<input type="text">
+		txtname.setAttribute("id", "txtbox");
+		txtname.setAttribute("value","홍길동");
+		
+		document.body.appendChild(txtname);
+		
+	}
+}
+
+</script>
+
+
+</head>
+<body>
+	<input type="text" id="txtmessage" value="hello">
+	<input type="button" id="getinfo" value="hello">
+	<hr>
+	<input type="button" id="동적생성" value="btnCreeate">
+	
+
+
+
+</body>
+</html>

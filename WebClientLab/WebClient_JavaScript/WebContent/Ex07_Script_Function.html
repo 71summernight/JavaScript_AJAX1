@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//function call(){}
+	//myfun=funtion(){}
+	
+	//function(){} 익명함수(일므이 없어요)
+	//함수는 호출>>몇번이고 필요하다면 재호출 가능
+	
+	//callback함수(프로그램 논리에 의해서 자동 호출 되는 함수/재귀호출정도로 보면 됌) >>1초마다 >>재호출>>익명함수
+	//저는요 function aa(){}>>setInterval(aa(),1000);
+	//function(){}다른곳에서 안쓰여... setUnterval만 쓸거야 의도가 담긴다면 익명함수가 훨씬 편하다
+	var myTime=setInterval(function(){
+		let d=new Date();
+		let t=d.toLocaleTimeString();
+		document.getElementById("time").innerHTML=t;
+		
+	},1000);
+	//myTime==setInterval
+	function myTimeStop(){
+		window.clearInterval(myTime);
+		
+	}
+
+</script>
+</head>
+<body>
+	<p id="time"></p>
+	<button onclick="myTimeStop()">stop Time</button>
+	
+</body>
+</html>

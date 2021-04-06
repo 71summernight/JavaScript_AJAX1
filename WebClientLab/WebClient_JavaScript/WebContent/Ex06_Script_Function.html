@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link href="icon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+<script type="text/javascript">
+	/*
+	 * java
+	 public void print(){}
+	 public String print(){return""}
+	 public int print(int num,int num2){return num+num2;}
+	
+	
+	 //javascript : void(x),return type(x)
+	 */
+	function callConfirm() { //사용자 정의 함수<> 내장(함수: 웹 브라우저)
+		if (window.confirm("작업내용")) {
+			//window.confirm 내장함수(사용법) return trte or false
+			alert("삭제");
+		} else {
+			alert("취소");
+
+		}
+	}
+	 
+		function showPopup(){
+			window.open("Ex06_popup.html","zipcode","width=200,height=200");
+			//open()새창 띄우기
+			/*specs parameter 가
+			-브라우저마다 지원 여부가 다를 수 있다.(확인)
+			-주소창, 창의 크기.....
+			
+			*/
+		}
+		function myFunc(){
+			let mywindow=window.open("Ex06_popup.html","zipcode","width=500,height=200");
+			//mywindow 새창을 의
+			mywindow.document.write("<p>this is zipcode windeow</p>");
+		}
+/* 		java public void goUrlTime(String url){}
+ */		
+		function goUrlTime(url){  //parameter는 이름
+	 	window.setTimeout("location.href='"+url+"'",3000);
+		//setTimeout 내장함수
+		//3초가 지나면 첫번째 parameter에 있는 것을 실행해라
+		//location.href='http://www.naver.com'
+		
+		}
+ 
+ 	function myfun(i,j,k){ //public unt myfun(int i,int j, int k){return i+j+k;}
+ 	return i+j+k;
+ 		
+ 	}
+	let result=myfun(10,20,30);
+	console.log("result: "+result);
+	
+	//**익명함수(1번 쓰고,,,,)
+	//function 이름(){}
+	
+ 	changeColor=function(){ //함수를 만드는 방법중에 하나
+ 		window.document.bgColor="silver";
+ 		window.document.fgColor="red";
+ 		
+ 	}
+ 	
+ 
+		
+</script>
+</head>
+<body>
+	<h3>내장함수, 사용자 정의 함수 사용</h3>
+	<button onclick="callConfirm()">클릭 사건 발생(호출)</button><br>
+	<button onclick="showPopup()">팝업창</button>
+	<button onclick="myFunc()">팝업객체</button><br>
+	<button onclick="goUrlTime('http://www.daum.net')">3초 후 이동</button>
+	<button onclick="changeColor()">익명함수</button><br>
+
+	
+	
+	
+</body>
+</html>

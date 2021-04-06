@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 선택자</title>
+	<!--  
+	   1. 기본 선택자 (기존에 존재하는 태그 : p div hr h3)
+	   ex) p {color:red}
+	   
+	   2. 다중(group) 선택자
+	   ex) p, h1, h2, h3 {color:red}
+	   
+	   3. 사용자 정의( class , id )
+	   ex) .my {color:red} 범용적 (page 여러번 사용)
+	       .you {color:red}
+	       <p class="my"></p>
+	       <p class="my you"></p>
+	       
+	       #idstyle {color:pink} 식별자(page 당 1개)
+	       <div id="idstyle"></div>
+		
+		4. 결합 선택자
+		p {color:black}
+		p.one {border:1px}
+		p.two {border:5px}
+		ex) <p></p>  color:black
+		    <p class="one"></p>  ..color:black ..border:1px
+		    <p class="two"></p>  ..color:black ..border:5px
+		    
+		5. [자손], 후손 선택자
+		div p {color:green; }
+		    
+	-->
+	<style type="text/css">
+		div p{color: green ; font-family: "궁서체" , "명조체" , "광수체"}
+	</style>
+</head>
+<body>
+	<p>나는 스타일 적용 될까</p>
+	<div>DIV태그</div>
+	
+	<h3>하위(자손) 선택자</h3>
+	<div>
+			<p>선택자</p>
+			<p>선택자2
+				<p>선택자3</p>
+			</p>
+			<div>
+				<p>선택자4</p>
+			</div>
+	</div>
+</body>
+</html>
+
+
+
+

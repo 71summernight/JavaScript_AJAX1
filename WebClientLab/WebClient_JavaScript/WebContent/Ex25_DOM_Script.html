@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>이벤트 주의 사항</title>
+	<script type="text/javascript">
+		function displayDate(){
+			console.log("call");
+			document.getElementById("demo").innerHTML= new Date();
+		}
+		
+		//document.getElementById("mybtn").onclick=displayDate();
+		//body실행 안되서 메모리에 없어요 .. 
+		
+		
+		window.onload = function(){
+			console.log("load");
+			//document.getElementById("mybtn").onclick=displayDate();
+		}
+	</script>
+</head>
+<body>
+	<button id="mybtn">눌러봐</button>
+	<br>
+	<button id="mybtn2" onclick="">눌러봐2</button>
+	<br>
+	<p id="demo"></p>
+</body>
+	<script type="text/javascript">
+		//버튼을 클릭하면 함수를 호출하겠다 ...
+		//displayDate();
+		
+		//버튼을 클릭하기 전에 displayDate() 호출 되어버렸다 ...
+		document.getElementById("mybtn").onclick=displayDate;// (X) //displayDate()
+	</script>
+</html>
+
+
+
+

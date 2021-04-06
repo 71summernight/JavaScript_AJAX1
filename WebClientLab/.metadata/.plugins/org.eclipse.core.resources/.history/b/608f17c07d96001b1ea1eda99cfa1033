@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<title>Insert title here</title>
+	<style type="text/css">
+		#menudiv {
+			width: 300px;
+			height: 300px;
+			float: left;
+			margin: 3px;
+			background-color: gold;
+		}
+	</style>
+<script type="text/javascript">
+/*
+ * low-level interface 비동기 함수(jquery.ajax(),$.ajax())
+ * $.ajax(url,[settings]);
+ * 
+ url:요청주소
+ [settings]>>여러개의 옵션>>{json객체}
+ 
+ */
+
+ $(function(){
+
+	 $('message').click(function(){
+		$sjax(
+		{
+			url:"Ex02_menu.html",
+			dataType:"html",//서버가 응답하는 데이터 형식
+			
+		}		
+		
+		);
+		
+		
+	 });
+ });
+
+
+</script>
+</head>
+<body>
+	<div id="menudiv">
+		<a href="#" id="menu1"></a>
+	</div>
+	<span id="message">클릭하세요</span>
+</body>
+</html>

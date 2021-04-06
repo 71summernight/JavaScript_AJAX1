@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+/Users/71summernight/WEB/WebClientLab/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2027489902.index
+/WebClient_JavaScript_Ajax/src
+/Users/71summernight/WEB/WebClientLab/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3149117480.index
+/WebClient_Jquery_Ajax/src
+/Users/71summernight/WEB/WebClientLab/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1914880084.index
+/WebClient_JavaScript/src
+/Users/71summernight/WEB/WebClientLab/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/15506012.index
+/WebClient/src

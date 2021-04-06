@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ *   1. XMLHttpRequest 객체 얻기
+ 2. onreadystatechange 이벤트 핸들러 구현 (함수)
+ 3. 요청 정보 ( open() )
+ 4. 요청 보내기 (send() )
+ 5. 응답 처리 (Text(JSON), xml )
+ 
+ */
+ var httpReq=null;
+ function getinstance(){
+	 if(window.XMLHttpRequest){
+		  xhr = new XMLHttpRequest(); //현재 브라우져 XMLHttpRequest 내장
+	  }else if(window.ActiveXObject){ //IE6 이하   //지금 필요없어요
+		  xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	  }else{
+		 throw new Error("AJAX 지원하지 않습니다"); 
+	  }
+	 return httpReq;
+ }
+function handlerStateChange(){
+	 if(httpReq.readyState==4){
+		 if(httpReq.status>=200 && httpReq.status<300){
+			 //2.서버에서 응답이 왔고, 상태가 정상이라면 (200~299)
+			document.getElementById("container").innerHTML=httpReq.responseText;
+			//httpReq.responseText 서버가 보낸 데이터
+		 }else{
+			 alert("status Text:" +httpReq.status);
+			 
+		 }
+	 }
+ }
+
+function sendData(){
+	httpReq=getInstance();
+	http
+	 
+}
+
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

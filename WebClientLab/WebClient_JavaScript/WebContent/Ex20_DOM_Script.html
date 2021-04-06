@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.democlass { color:red;}
+	</style>
+</head>
+<body>
+	<div id="div">
+		<h1 class="democlass">Hello World_1</h1>
+		<h1 class="democlass">Hello World_2</h1>
+		<h1 class="democlass">Hello World_3</h1>
+	</div>
+</body>
+<script type="text/javascript">
+	//document.getElementsByTagName("h1")[0].removeAttribute("class");
+	/*
+	let arr = document.getElementsByTagName("h1");
+	console.log(arr);
+	for(let i = 0 ; i < arr.length ; i++){
+		arr[i].removeAttribute("class");
+	}
+	*/
+	/*
+	문제 발생 : 동적 .... 
+	let arr = document.getElementsByTagName("h1");
+	for(let index in arr){
+		//console.log(arr[index]);
+		console.log("index : " +  index   +"-length : " + arr.length);  //2 , 1
+		document.getElementById("div").removeChild(arr[index]);
+		
+		//[0][1][2]
+		//[Hello World_1][Hello World_2][Hello World_3]
+		
+		//[0][1]
+		//[Hello World_2][Hello World_3]
+		
+		//[0]
+		//[Hello World_2]  
+		
+		
+	}
+	*/
+	let arr = document.getElementsByTagName("h1");
+    for(let index in arr){
+    	if(arr.length > 0){
+    		console.log(index + " / " + arr.length + " / " + (arr.length -1));
+        	document.getElementById("div").removeChild(arr[arr.length-1]);
+    	}
+    }
+    //[0][1][2]  >> [2] 삭제
+    //[0][1]     >> [1] 삭제
+    //[0]        >> [0] 삭제
+    
+    //[자기 자신 삭제하기]
+    let arr=document.getElementByTagName("h1");
+    let len=arr.length; //3
+    for(let i=0; i<len; i++){
+    	//remove() 자기자신 삭제
+    arr[arr.length-1].remove();
+    }
+    
+    
+    
+    
+</script>
+</html>
+
+
+

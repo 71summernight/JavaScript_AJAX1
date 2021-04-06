@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+//$.getJSON()
+//기본 옵션이: dataType>> json 설정 되어 있어요
+$(function(){
+	$('#btn.btnload').click(function(){
+		//비동기 함수
+		$.getJSON("Ex05_json.json",function(data){
+		//응답이 왔고 정상 건이라면
+		console.log(data);
+		
+		
+		
+		});
+		
+	});
+});
+
+</script>
+</head>
+<body>
+<div id="btn">
+<div class="btnload">JSON DATA LOAD</div>
+</div>
+<div id="display">
+
+</div>
+</body>
+</html>

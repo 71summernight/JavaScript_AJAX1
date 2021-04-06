@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+	
+	
+	$(function(){
+		$('#btn').click(function(){
+			let flickerAPI="https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
+			let data={tags:$('#search').value,tagmode:"any",format:"json"}
+			console.log(data);
+			$.getJSON(flickerAPI,data,function(data,textStatus,xhr){
+				//응답이 왔고, 성공
+				//console.log(data);
+				//console.log(textStatus);
+				//console.log(xhr.readyState);
+				
+				$('#images').empty();
+				$.each(data.items,function(index,obj){
+					$('<img>').attr("src",obj.media.m).appendTo("#images");
+					//img 태그를 생성하고 src 속성에 이미지 경로 설정 div append
+					
+				});
+			});
+		});
+		
+	
+	});
+	
+	
+	
+	
+	
+	</script>
+</head>
+<body>
+<input type="text" id="search">
+<input type="button" value="검색하기" id="btn">
+<hr>
+<div id="images"></div>
+</body>
+</html>

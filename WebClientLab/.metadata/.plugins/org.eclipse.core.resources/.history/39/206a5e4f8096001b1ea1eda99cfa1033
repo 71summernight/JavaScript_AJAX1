@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+//jQuery.get( url [, data ] [, success ] [, dataType ] )
+//전송방식 GET>>open("GET")
+
+$(function(){
+	$('#btn').click(function(){
+		//비동기 함수 $.get
+		$.get("Ex03_Company.xml",function(data){
+			//응답이 왔고 정상이라면
+			console.log(data);
+			//여기서 부터는 비동기 아니고 Jquery
+			//복습
+			$('#display').empty();//자식요소제거
+			console.log($(data).find('Company'));
+			//find함수>>return Array[,]
+			
+			//$.each(function(index,element){})
+			$(data).find('Company').each(function(){
+				//학습 this 사용
+				console.log(this);
+				
+			});
+			
+		});
+			
+	});
+	
+});
+
+
+
+
+</script>
+</head>
+<body>
+<input type="button" id="btn" value="회사소개">
+<div id="display" style="background-color: gray">DATA</div>
+
+</body>
+</html>

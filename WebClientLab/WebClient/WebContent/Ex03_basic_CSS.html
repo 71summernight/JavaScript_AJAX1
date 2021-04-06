@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cCSS 적용하기</title>
+<style type="text/css">
+	body{background-color:gray;}
+	h3 {color:pink;}
+
+</style>
+<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+<!--
+ cssL Cascading Style Sheets(CSS) is used to format the layout of webpage
+Inline - by using the style attribute inside HTML elements
+Internal - by using a <style> element in the <head> section
+External - by using a <link> element to link to an external CSS file
+
+<block 태그 >> <p></p>
+Use the CSS border property for borders
+Use the CSS padding property for space inside the border
+Use the CSS margin property for space outside the border
+
+-->
+
+<h3>1. Inline 방식</h3>
+<p style="background-color:gold">문단태그</p>
+<h3 style="color:green">나는 무슨색(안쪽 속성이 우선)</h3>
+<h3>external 방식</h3>
+<h1>외부파일을 참조합니다.</h1>
+<h3>웹상에서의 절대경로</h3>
+<img src="https://www.baemin.com/img/ctn03_text_02@2x.png">링크
+<h3>상대경로</h3>
+<img src=:images/1.jpeg>링크
+</body>
+</html>

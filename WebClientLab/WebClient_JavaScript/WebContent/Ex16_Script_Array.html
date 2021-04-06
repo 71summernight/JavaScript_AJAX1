@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	let i = 1;
+	let sum = 0;
+	while (i <= 10) {
+		sum += i;
+		i++;
+
+	}
+	document.write("sum:" + sum + "<br>" + i + "<br>");
+	//for
+	let sum2 = 0;
+	for (let i = 0; i <= 10; i++) {
+		if (i % 3 == 0) {
+			console.log("i: " + i);
+			continue;
+
+		}
+		console.log("for i: " + i);
+		sum2 += i;
+
+	}
+	document.write("sum: " + sum + "<br>");
+	//do~while
+	let a = 1;
+	do {
+		document.write(a + "<br>");
+		a++;
+	} while (a < 11);
+	/*
+	개선된 for>> for(int i: array)
+	javascript>> for(let i in array) c#: in
+	
+	java: 정적(Array)>>배열방 고정: 동적(Collection )>>동정 (다양한 class)
+	int[] arr=new int[3];
+	int[] arr=new int[]{1,2,3};
+	int[] arr={1,2,3};
+	
+	ArrayList al=new ArrayList();
+	al.add(1);
+	al.add(2);
+	
+	javascript>>정적+동적>>Array
+	선언방법
+	let arr=[]; 가장 좋아하는 코드(동적배열)
+	arr.push();
+	
+	 */
+	 let arr=[10,20,30];
+	 for(let i=0;i<arr.length;i++){
+		 document.write(arr[i]+"<br>");
+	 }
+	 
+	 let eng=new Array(3); //나쁜 냄새가 난다~
+	 for(let i=0; i<eng.length;i++){
+		 document.write(eng[i]+"<br>");
+	 }//각각의 방이 타입 정보를 가지지 않아요
+	 //undefined
+	 //undifined
+	 //undified
+	 
+	 
+	 eng[0]=100;
+	 eng[1]=200;
+	 eng[2]=300;
+	 
+	 document.write("<hr>");
+	 for(let i=0; i<eng.length;i++){
+		 document.write(eng[i]+"<br>");
+	 }
+	 //good >>빈배열
+	 //javascript Array>>자료구조는>>stack(Last In First Out)
+	let arr2=[];
+	arr2.push(10);
+	arr2.push(20);
+	
+	//1.배열 기본 생성 방법
+	let array=new Array(5);//bad
+	
+	//2. 배열 생성 초기화
+	let arrray2=new Array(10,20,30);//bad
+	
+	//3. 동적배열
+	let array3=[1,2,3]; //good
+	let array4=[];
+	array4.push(10);
+	array4.push(11);
+	document.write(array4.pop());
+	
+	
+	
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

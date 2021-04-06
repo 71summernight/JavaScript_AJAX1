@@ -1,0 +1,46 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>개발자 필수 태그(암기)</title>
+</head>
+<body>
+	<!--
+회원가입, 로그인, 게시판 글쓰
+-->
+
+<h3>로그인</h3>
+<form action="Ex11_login.jsp" method="post">
+	ID:<input type="text" name="id"><br>
+	PWDL<input type="password" name="pwd"><br>
+<!--	<input type="reset" value="취소하기"> -->
+	<input type="image" src="images/btn.jpeg">
+	</form>
+	
+	<!-- 
+	form 태그는 전송을 담당하는 태그(클라이언트가 입력한 데이터를 가지고 서버로 가기)
+	네이버> 회원가입 요청> 회원가입 전달> 정보입력(id,pwd,주소)>네이버(서버)전송
+	>전송받은 데이터 처리>DB>insert
+	
+	form 전송 수단(운송)>>	<input type="submit" :출발>
+	1.배를타고 (method="get") 목적지(action="login.jsp")
+	
+	--입력한 데이터 노출>>Ex11_login.jsp?id=hong&pwd=1007
+	--게시판 글번호 링크
+	--<a href="boardcontent
+	
+	2.비행기 (method="post")
+		--http://192.186.0.36:8090/WebClient/Ex11_login.jsp
+		>>http 프로토콜(header)안에 숨겨서 데이터를 전송가능
+		
+		//선장: snubmit,reset
+		1.input type="submit" 전송
+		2.input type="image" 내부적으로 전송기능(submit)
+		3.input type="button" 디자인만 존재>> 별도의 함수 호출
+			function sub(){document.form.submit(); }
+	 -->
+</body>
+</html>

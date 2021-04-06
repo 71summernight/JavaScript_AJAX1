@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>Insert title here</title>
+   <script type="text/javascript">
+   /* 
+     1. XMLHttpRequest 객체 얻기
+     2. onreadystatechange 이벤트 핸들러 구현 (함수)
+     3. 요청 정보 ( open() )
+     4. 요청 보내기 (send() )
+     5. 응답 처리 (Text(JSON), xml )
+        (responseText  , responseXML)
+   */
+   var httpReq=null;
+   
+   function getInstance(){
+        if(window.XMLHttpRequest){
+           httpReq = new XMLHttpRequest(); //현재 브라우져 XMLHttpRequest 내장
+        }else if(window.ActiveXObject){ //IE6 이하일 때 필요 지금은 거의 쓰이지 않는다
+           httpReq = new ActiveXObject("Msxml2.XMLHTTP");
+        }else{
+          throw new Error("AJAX 지원하지 않습니다"); 
+        }
+      return httpReq;  
+   }
+   function handlerStateChange(){
+       if(httpReq.readyState == 4){ //1. 서버에서 응답이 왔다면
+          if(httpReq.status >= 200 && httpReq.status < 300){
+            //가공하는 곳
+            document.getElementById("txtdata").innserHTML=httpReq.responseText;
+            
+             
+          }else{
+             alert("status Text : " + httpReq.status);
+          }
+       }
+   }
+   function sendData(word){
+      httpReq = getInstance();
+      httpReq.onreadystatechange = handlerStateChange;  // x >> ()
+      httpReq.open("GET","Ex06_EmpSearch.jsp?word="+word); //form 태그 구성
+      httpReq.send(); // form submit 버튼 클릭
+   }
+   </script>
+</head>
+<body>
+      <h3>사원 검색하기(비동기)</h3>
+      <select name="emp" id="emp" onchange="sendData()">
+         
+         <option value="0000">SELECT EMPNO</option>
+         <option value="0000">SELECT EMPNO</option>
+         <option value="0000">SELECT EMPNO</option>
+         <option value="0000">SELECT EMPNO</option>
+
+      
+      </select>
+</body>
+</html>
+
+
+

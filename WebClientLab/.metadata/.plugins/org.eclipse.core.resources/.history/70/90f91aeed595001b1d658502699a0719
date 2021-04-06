@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* 
+	 1. XMLHttpRequest 객체 얻기
+	 2. onreadystatechange 이벤트 핸들러 구현 (함수)
+	 3. 요청 정보 ( open() )
+	 4. 요청 보내기 (send() )
+	 5. 응답 처리 (Text(JSON), xml )
+	 (responseText,responseXML)
+	 */
+</script>
+</head>
+<body>
+	<h3>단어검색하기</h3>
+	word:
+	<input type="text" id="txtword" onkeyup="sendData(this.value)">
+	
+<fieldset>
+<legend>검색단어</legend>
+<span id="word"></span>
+
+</fieldset>
+
+</body>
+</html>
